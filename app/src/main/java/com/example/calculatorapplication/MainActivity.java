@@ -18,8 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button button0, button1, button2, button3, button4, button5, button6, button7,
             button8, button9, buttonAdd, buttonMultiply, buttonSubs, buttonDivision, buttonPoint, buttonPercent,
-            buttonPower, buttonEqual, buttonClear, buttonMemoryStore, buttonMemoryRecall,
-            buttonOpenParenthesis, buttonCloseParenthesis;
+            buttonPower, buttonEqual, buttonClear, buttonMemoryStore, buttonMemoryRecall;
 
     private Stack<String> memoryStack;
 
@@ -51,8 +50,6 @@ public class MainActivity extends AppCompatActivity {
         buttonClear = findViewById(R.id.btn_clear);
         buttonMemoryStore = findViewById(R.id.btn_memory_store);
         buttonMemoryRecall = findViewById(R.id.btn_memory_recall);
-        buttonOpenParenthesis = findViewById(R.id.btn_open_parenthesis);
-        buttonCloseParenthesis = findViewById(R.id.btn_close_parenthesis);
 
         memoryStack = new Stack<>();
     }
@@ -92,12 +89,6 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case "MR":
                 recallMemory();
-                break;
-            case "(":
-                input += "(";
-                break;
-            case ")":
-                input += ")";
                 break;
             default:
                 if (input == null) {
